@@ -1,0 +1,32 @@
+<!doctype HTML>
+<html>
+
+<head>
+	<title>Daily Financial Tracker</title>
+	<link rel="stylesheet" type="text/css" href="dft.css">
+	<link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Chango' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+	<script src="dft.js" ></script>
+	
+
+	
+</head>
+<body onLoad="init()">
+	<div id="header">
+		<span id="title">DFT</span>
+	</div>
+	<div id="sideBar">
+		<div id="leftBarOptions">
+			<div id="tileTitle" class="textBar"></div>
+			<ul id="listOfItems"></ul>
+			<div id="addItem" class="textBar"><span style="text-align:left">Add Item</span><span style="float:right">></span></div>
+			<div id="itemName" class="textBarTop"><label id="label">Item name:<textarea id="textarea" type="submit"></textarea></label></div>
+			<div id="create" class="textBarBottom">create</div>
+		</div>
+	</div>
+	<div id="tiles"></div>
+	
+	
+</body>
+</html>

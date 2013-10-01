@@ -1,0 +1,185 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Inkling Gradient Challenge</title>
+    <style type="text/css" media="screen">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #gradient {
+            position: relative;
+            margin: 0 auto;
+            width: 400px;
+            height: 400px;
+        }
+        
+        #gradient div {
+            position: absolute;
+        }
+        
+        #buttons {
+        	position:absolute;
+        	left:20px;
+        	top:20px;
+        	float:left;
+        	list-style:none;
+        	z-index:10;
+        }
+        
+        #buttons li{
+        	margin:5px;
+        }
+        
+    </style>
+</head>
+<body>
+<ul id="buttons">
+    	<li><button style=" width:100px" onclick="gradient.push(0)">Add Black</button></li>
+    	<li><button style=" width:100px" onclick="gradient.push(255)">Add White</button></li>
+    	<li><button style=" width:100px" onclick="gradient.pop()">Pop</button></li>
+	    <li><button style=" width:100px" onclick="gradient.shift()">Shift</button></li>
+	    <li><button style=" width:100px" onclick="gradient.unshift(0,250)">Unshift(0,250)</button></li>
+	    <li><button style=" width:100px" onclick="gradient.reverse()">reverse</button></li>
+	    <li><button style=" width:100px" onclick="gradient.sort()">Sort</button></li>
+	    <li><button style=" width:100px" onclick="gradient.map(function(stop){return Math.min(155, stop +100);})">Map</button></li>
+	    <li><button style=" width:100px" onclick="gradient.clear()">Clear</button></li>
+    </ul>
+    <div id="gradient"></div>
+    
+    <script type="text/javascript" charset="utf-8">
+        var element = document.getElementById('gradient');
+        
+        function Gradient(element,  arr){
+        
+            this.arr = arr;
+            this.element = element;
+            
+            // draws/redraws the gradient
+            this.draw = function() {
+            	
+            	this.clearDivs();
+            	
+                var diameter = this.element.clientHeight;
+                var numStops = this.arr.length;
+                
+                if(numStops == 0){
+                	this.clear();
+                } else {
+	                var sectionLength = numStops>1 ? (diameter/2)/(numStops-1) : 1;
+	                
+	                var width = diameter;
+	                
+	                for(var i = 0; i < numStops-1; i++){
+	                    
+	                	var increment = (this.arr[i+1] - this.arr[i])/(2*sectionLength);
+	                    
+	                    var k = this.arr[i];
+	                    
+	                    var renderK = k;
+	                    
+	                    //draw divs, decreasing height/width by 1px every time
+	                    for(var j = 0; j < sectionLength*2; ++j){
+	                        var div = document.createElement('div');
+	                        div.style.width = diameter + "px";
+	                        div.style.height = diameter + "px";
+	                        div.style.top = (width-diameter)/2;
+	                        div.style.left = (width-diameter)/2;
+	                        div.style.borderRadius = diameter/2;
+	                        div.style.position = "absolute";
+	                        div.style.backgroundColor = 'rgb('+renderK+','+renderK+','+renderK+')';
+	                        k += increment;
+	                        renderK = Math.floor(k);
+	                        diameter-=1;
+	                        this.element.appendChild(div);
+	                    }
+	                }
+                }    
+            }    
+            
+            //clear divs
+            this.clearDivs = function () {
+            	while( this.element.hasChildNodes() ){
+            		this.element.removeChild(this.element.lastChild);
+            	}
+            }
+            
+            //clears the gradient
+            this.clear = function () {
+            	this.clearDivs();
+                this.arr = [];
+            }
+            
+            //removes and returns the last stop
+            this.pop = function () {
+            	var temp = this.arr.pop();
+            	this.draw();
+            	return temp;
+            }
+            
+            //removes and returns the first stop
+            this.shift = function() {
+            	var temp = this.arr.shift();
+            	this.draw();
+            	return temp;
+            }
+            
+            //appends given stops to the beginning of the gradient
+            this.unshift = function(){
+            	for(var i = 0; i < arguments.length; ++i){
+            		this.arr.unshift(arguments[i]);
+            	}
+            	this.draw();
+            }
+            
+            //appends given stops to the end of the gradient
+            this.push = function () {
+                for(var i = 0; i < arguments.length; ++i){
+                    this.arr.push(arguments[i]);
+                }
+                this.draw();
+            }
+            
+            //reverse the order of all stops
+            this.reverse = function() {
+            	this.arr.reverse();
+            	this.draw();
+            }
+            
+            //modifies the gradient by calling the callback for every stop
+            this.map = function(callback) {
+            	for(var i = 0; i < this.arr.length; ++i){
+            		this.arr[i] = callback(this.arr[i]);
+            	}
+            	this.draw();
+            }
+            
+            //sorts the stops (via an optional comparison callback)
+            this.sort = function(callback) {
+            	this.arr.sort(callback);
+            	this.draw();
+            }
+            
+            return this.draw();
+            
+        }
+        
+        var gradient = new Gradient(element, [0, 255]);
+        gradient.push(0,255);
+        gradient.shift();
+        gradient.map(function(stop){
+            return Math.min(255, stop + 100);
+        });
+        gradient.unshift(0);
+        gradient.pop();
+        
+        
+    </script>
+    
+        
+</body>
+</html>
+

@@ -1,0 +1,142 @@
+body {
+	margin:0;
+	padding:0;
+}
+
+ul {
+	list-style:none;
+	list-style-type:none;
+	margin-left:0;
+	padding:0;
+}
+#title {
+	//font-family: 'Graduate', cursive;
+	font-family: 'Chango', cursive;
+	font-size:30px;
+	color:#a8a8a8;
+	
+}
+
+#leftBarOptions {
+	//	background-color: black;
+}
+
+#tileTitle {
+	text-align:center;
+}
+
+.textBar:hover, .textBarList:hover, .textBarTop:hover, .textBarBottom:hover {
+	background-color:white;
+}
+
+
+
+.textBar{
+	background-color: #a2e4f9;
+	width: 80%;
+	margin: 20px auto;
+	padding: 7px;
+	border-radius: 5px;
+}
+
+.textBarList {
+	background-color: #f6f6f6;
+	border-bottom: 1px solid #dfdfdf;
+	width: 80%;
+	margin: 0 auto;
+	padding: 7px;
+}
+
+.expense {
+	display:none;
+}
+.textBarCenter {
+	background-color: #f6f6f6;
+	width: 80%;
+	margin: 0 auto;
+	padding: 7px;
+	border-radius:5px;
+}
+
+.textBarTop, #itemName {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-color: #f6f6f6;
+	border-bottom: 1px solid #dfdfdf;
+	width: 80%;
+	margin: 20px auto 0 auto;
+	padding: 7px;
+}
+
+.textBarBottom, #create {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-color: #f6f6f6;
+	width: 80%;
+	margin: 0 auto 20px auto;
+	padding: 7px;
+}
+
+#header {
+	border-bottom: 1px solid #a2a2a2;
+	height:100px;
+}
+
+#title2 {
+	font-family: 'Chango', cursive;
+	font-size:20px;
+	color: #c8c8c8;
+}
+
+#sideBar {
+	width:300px;
+	height:600px;
+	background-color:#e3e3e3;
+	float:left;
+	
+}
+
+.bar {
+	height:5px;
+	background-color:rgb(0,255,0);
+}
+
+#tiles {
+}
+
+label textarea, label input{
+ 	vertical-align: middle;
+}
+
+label .expense {
+	margin-left:20px;
+}
+textarea, input {
+	border:1px solid #dbdbdb;
+	width: 50%;
+	float: right;
+	margin-right: 10px;
+	height:14px;
+}
+
+.tile {
+	border: 1px solid white;
+	background-color:none;
+	border-radius:5px;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	padding:10px;
+	float:left;
+	box-shadow: 3px 3px 10px #a2a2a2; 
+	-webkit-box-shadow: 3px 3px 10px #a2a2a2;
+	-moz-box-shadow: 3px 3px 10px #a2a2a2; 
+}
+
+.tile:hover {
+	background-color: #eee;
+	border: 1px solid #dfdfdf;
+	box-shadow: 4px 4px 8px #fff; 
+	-webkit-box-shadow: 4px 4px 8px #fff;
+	-moz-box-shadow: 4px 4px 8px #fff; 
+}

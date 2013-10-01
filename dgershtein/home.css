@@ -1,0 +1,432 @@
+body {
+	margin:0;
+	padding:0;
+	font:16px/1.3em "Helvetica","Arial","sans-serif";
+}
+
+#top {
+width:100%;
+height:50px;
+background:white;
+}
+
+
+#container {
+	width: 1000px;
+	height:auto;
+	margin: 0 auto;
+	padding-top:100px;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(left, #ffffff 0%, #c2ccd3 50%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(50%,#c2ccd3), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #ffffff 0%,#c2ccd3 50%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #ffffff 0%,#c2ccd3 50%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #ffffff 0%,#c2ccd3 50%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to right, #ffffff 0%,#c2ccd3 50%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+a {
+	text-decoration: none;
+	font:16px/1.3em "Helvetica","Arial","sans-serif";
+	color: rgb(235, 235, 235);
+}
+
+.clear {
+	clear:both;
+}
+
+#menu {
+	width: 680px;
+	float: right;
+	padding:1.5em 0 1.5em 1.5em;
+}
+
+ul {
+	list-style: none;
+	margin-top: 0px;
+	padding-left: 10px;
+}
+
+#dalya {
+	font: 16px/1.3em "Helvetica","Arial","sans-serif";
+	color:white;
+	float:left;
+	padding:1.5em 0;
+}
+
+#menu li {
+	float: left;
+	margin-left: 50px;
+}
+
+#menu a:hover {
+	color:#119AE2;
+}
+
+body#about a#about,
+body#projects a#projects,
+body#drawings a#drawings,
+body#animations a#animations,
+body#photography a#photography {
+        color:#119AE2;
+}
+
+#header {
+	height:70px;
+	background-color:rgb(41, 41, 41);
+	box-shadow: 0px 4px 5px black;
+	z-index:100;
+	position:fixed;
+	width:100%;
+}
+
+#headerelems {
+	width: 1000px;
+	height: 100%;
+	margin: auto;
+}
+.tile {
+	float: left;
+	margin: 1%;
+
+}
+
+/*******HOME*******/
+body#home #carnivale {
+	width:980px;
+}
+
+body#home #raytracer {
+	width:600px;
+}
+
+body#home #kiwi {
+	width:360px;
+}
+
+body#home #crank {
+	height:250px;
+}
+
+body#home #hoteltransylvannia {
+	height:250px;
+	width:560px;
+}
+
+body#home .desc{
+position: relative;
+background-color: rgba(12, 12, 12, 0.7);
+height: 100%;
+font-size: 2em;
+line-height: 1.5em;
+text-align: center;
+color: white;
+}
+
+body#home #carnivale .desc {
+	margin-top:-270px;
+}
+
+body#home #kiwi .desc {
+	margin-top:-50px;
+}
+body#home #hoteltransylvannia .desc {
+	margin-top:-120px;
+}
+body#home #raytracer .desc {
+	margin-top:-250px;
+}
+body#home #crank .desc {
+	margin-top:-100px;
+}
+
+
+body#home #container {
+	height:1200px;
+}
+
+/************ABOUT******/
+body#about {
+	background-color:black;
+	color:white;
+font:16px/1.3em "Helvetica","Arial","sans-serif";  
+}
+
+body#about #container {
+	margin:0 auto;
+	padding-top:0;
+	width:100%;
+	background:black;
+}
+
+body#about #description {
+font-style:italic;
+padding: 20px;
+background-color: rgba(46, 46, 46, 0.7);
+position:absolute;
+top:100px;
+left: 45%;
+width: 50%;
+border-radius: 5px;
+margin-bottom:20px;
+}
+
+body#about .heading {
+font-style: normal;
+font-weight: bold;
+color: #119AE2;
+}
+
+body#about p {
+padding:0;
+margin:0;
+}
+body#about .section {
+margin:1em;
+}
+
+
+/*********PROJECTS*******/
+
+.image {
+	width:40%;
+	height:300px;
+	overflow:hidden;
+	float:left;
+}
+
+.project {
+	padding: 2%;
+	margin:30px 0;
+	height:300px;
+	background-color: rgba(155, 191, 219, 0.3);
+	-moz-box-shadow: 0 0 5px 5px rgb(194, 194, 194);;
+	-webkit-box-shadow: 0 0 5px 5px rgb(194, 194, 194);;
+	box-shadow: 0 0 5px 5px rgb(194, 194, 194);;
+	cursor:pointer;
+	width:1000px;
+}
+
+.project:hover {
+	background-color:rgba(155, 191, 219, 1);
+}
+
+.description {
+	float:right;
+	width:55%;
+}
+
+body#projects img, body#animations img{
+	width:100%;
+}
+
+body#projects #container, body#animations #container {
+	margin:0px auto;
+	padding-top:100px;
+}
+
+#maze input {
+	width:60px;
+}
+
+/*****DRAWINGS*******/
+body#characters #container {
+	height:900px;
+}
+
+body#drawings #container {
+	height:1000px;
+	width:840px;
+}
+
+body#drawings .tile, body#home .tile {
+	cursor:pointer;
+}
+
+body#drawings .desc{
+	position: relative;
+margin-top: 300px;
+background-color: rgba(13,13,13,0.3);
+height: 100%;
+color: white;
+text-align: center;
+font-size: 4em;
+line-height: 1.3;
+}
+
+.tile {
+overflow:hidden;
+float: left;
+height: 400px;
+width: 400px;
+-moz-box-shadow: 0 0 10px 3px rgb(138, 138, 138);
+-webkit-box-shadow: 0 0 10px 3px rgb(138, 138, 138);
+box-shadow: 0 0 10px 3px rgb(138, 138, 138);
+}
+
+body#paintings .tile {
+	height:auto;
+	width:auto;
+}
+
+.tile:hover {
+-moz-box-shadow: 0 0 10px 3px rgb(85, 146, 202);
+-webkit-box-shadow: 0 0 10px 3px rgb(85, 146, 202);
+box-shadow: 0 0 10px 3px rgb(85, 146, 202);
+}
+
+body#drawings #characters {
+	background:url('images/characters.jpg');
+}
+
+body#drawings #lifedrawing {
+	background:url('images/lifedrawing.jpg');
+}
+
+body#drawings #photoshop {
+	background:url('images/ps4.jpg');
+background-position-x: -100px;
+background-position-y: -200px;
+}
+
+body#drawings #paintings {
+	background:url('images/paintings.jpg');
+}
+
+
+/*****PAINTINGS*****/
+body#paintings #container {
+	width:500px;
+	height:7000px;
+}
+
+body#paintings .tile {
+	margin-bottom:30px;
+}
+
+/*******PHOTOGRAPHY*******/
+body#photography .tile, body#lifedrawing .tile {
+	width:300px;
+	height:300px;
+}
+
+body#photography #container {
+	width:1000px;
+}
+
+
+/*****PHOTOSHOP****/
+body#photoshop .tile img {
+	width:500px;
+}
+
+body#photoshop #container {
+	height:1500px;
+}
+
+/******LIFEDRAWING****/
+
+
+
+
+
+/*****GRADIENTS*****/
+
+#gradients {
+	height:400px;
+	cursor:auto;
+}
+
+#gradients .image {
+	height:400px !important;
+	width:400px !important;
+}
+
+#gradients  .description {
+	width:400px;
+}
+
+#gradient {
+    position: relative;
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+}
+
+#gradient div {
+    position: absolute;
+}
+
+#buttons {
+	left:20px;
+	top:20px;
+	float:left;
+	list-style:none;
+	z-index:10;
+	padding-right:20px;
+}
+
+#buttons li{
+	margin: 5px;
+	background-color: #119AE2;
+	height: 2.5em;
+	line-height: 2.5em;
+	text-align: center;
+	color: white;
+	cursor:pointer;
+	width:120px;
+}
+
+input {
+width: 40px;
+margin-left: 5px;
+}
+
+
+
+
+/******Carnivale*****/
+
+body#carnivale {
+	background:black;
+}
+
+body#carnivale #container {
+	background-image:url('images/filmbackground.jpg');
+	height:10800px;
+	background-repeat:no-repeat;
+
+}
+
+body#carnivale img {
+	width:1000px;
+	padding-top:50px;
+}
+
+/******* hoteltransylvannia *******/
+body#hoteltransylvannia img {
+	width:1000px;
+	padding-top:50px;
+}
+
+
+/******footer******/
+#footer {
+	background:rgb(41, 41, 41);
+}
+
+#footer table {
+	margin:auto;
+	padding-top:20px;
+}
+
+#footer table td {
+	padding-left:20px;
+	padding-right:20px;
+}
+
+#footer table th {
+	text-align:left;
+	padding-left:20px;
+}

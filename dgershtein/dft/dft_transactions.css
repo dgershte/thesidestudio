@@ -1,0 +1,31 @@
+.transactionsList {
+	text-align:center;
+}
+
+.transactionsList .item{
+	float:left;
+	width:30%;
+}
+.transactionsList .category{
+	width:30%;
+}
+
+.transactionsList .dollars{
+	width:30%;
+}
+#transactionsContainer {
+	font: "Arial", sans-serif;
+	overflow: auto;
+	height:400px;
+}
+
+
+#investmentsContainer{
+	font: "Arial", sans-serif;
+	text-align:center;
+	margin-top:50px;
+}
+
+.SELECTED{
+	background-color:#A2E4F9;
+}

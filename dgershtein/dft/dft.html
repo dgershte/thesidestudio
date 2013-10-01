@@ -1,0 +1,38 @@
+<!doctype HTML>
+<html>
+
+<head>
+	<title>Daily Financial Tracker</title>
+	<link rel="stylesheet" type="text/css" href="dft2.css">
+	<link rel="stylesheet" type="text/css" href="dft_transactions.css">
+	<link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Chango' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>   
+	<script src="dft2.js" ></script>
+	<script src="dft_init.js"></script>
+	<script src="dft_transactions.js"></script>
+	<script src="dft_investments.js"></script>
+	
+</head>
+<body onLoad="init()">
+	<div id="header">
+		<img src="images/logo.jpg"></img>
+	</div>
+	
+	<div id="sideBar">
+		<div id="leftBarOptions">
+			<div id="tileTitle" class="textBar"></div>
+			<div id="totalSpent" class="textBarList" style="display:none">Remaining:<span class="dollars"></span></div>
+			<div id="budget" class="textBarBottom" style="display:none">Budget:<span class="dollars"></span></div>
+			<ul id="listOfItems"></ul>
+			<div id="addItem" class="textBar"><span style="text-align:left">Add Item</span><span style="float:right">></span></div>
+			<div id="itemName" class="textBarTop"><form id="createItem"><label id="label">Item name:<input></input></label></form></div>
+			<div id="create" class="textBarBottom">create</div>
+		</div>
+	</div>
+	<div id="tiles"></div>
+	<div id="footer"><div id="textNodes"></div></div>
+	
+</body>
+</html>

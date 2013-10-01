@@ -1,0 +1,168 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="home.css" type="text/css" media="screen"/>
+		<link rel="stylesheet" href="cs488.css" type="text/css" media="screen"/>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43999281-1', 'thesidestudio.com');
+  ga('send', 'pageview');
+
+</script>
+	</head>
+	<body id="cs488">
+		<div id="header">
+		<script>loadMenu()</script>
+		</div>
+	<div id="container">
+		<div id="title">
+			<h2>CS-488 Final Project</h2>
+			<h1>Extended Ray Tracer</h1>
+		</div>
+
+		<div class="objective">
+			<div id="primitives" class="title">Extra Primitives</div>
+			<img src="cs488Images/prims.png"></img>
+		</div>
+		<div class="objective">
+			<div id="reflection" class="title">Reflections</div>
+			<img src="cs488Images/reflection.png"></img>
+		</div>
+		<div class="objective">
+			<div id="shadow" class="title">Soft Shadows</div>
+			<img src="cs488Images/soft.png"></img>
+		</div>
+		<div class="objective">
+			<div id="glossy" class="title">Glossy Reflections</div>
+			<img src="cs488Images/glossy.png"></img>
+		</div>
+		<div class="objective">
+			<div id="dof" class="title">Depth of Field</div>
+			<img src="cs488Images/dof1.png"></img>
+			<img src="cs488Images/dof2.png"></img>
+			<img src="cs488Images/dof2.png"></img>
+		</div>
+		<div class="objective">
+			<div id="refraction" class="title">Refraction</div>
+			<img src="cs488Images/refraction.png"></img>
+		</div>
+		<div class="objective">
+			<div id="alias" class="title">Adaptive Anti Aliasing</div>
+			<img src="cs488Images/alias1.png"></img>
+			<img src="cs488Images/alias2.png"></img>
+		</div>
+		<div class="objective">
+			<div id="voxels" class="title">Voxel Grid Subdivision</div>
+			<img src="cs488Images/voxels.png"></img>
+			<table id="voxelTable">
+				<tr>
+					<th> Option </th>
+					<th> Numer of Voxels </th>
+					<th> Number of objects </th>
+					<th> Time (in seconds) </th>
+				</tr>
+				<tr>
+					<td> Regular </td>
+					<td> 1 </td>
+					<td> 125 </td>
+					<td> 11.14 </td>
+				</tr>
+				<tr>
+					<td> No RayID </td>
+					<td> 20 </td>
+					<td> 125 </td>
+					<td> 0.52 </td>
+				</tr>
+				<tr>
+					<td> Using RayID </td>
+					<td> 20 </td>
+					<td> 125 </td>
+					<td> 0.49 </td>
+				</tr>
+				<tr>
+					<td> Regular </td>
+					<td> 1 </td>
+					<td> 1000 </td>
+					<td> 141.292 </td>
+				</tr>
+				<tr>
+					<td> No RayID </td>
+					<td> 20 </td>
+					<td> 1000 </td>
+					<td> 3.36 </td>
+				</tr>
+				<tr>
+					<td> Using RayID </td>
+					<td> 20 </td>
+					<td> 1000 </td>
+					<td> 2.93 </td>
+				</tr>
+			</table>
+		</div>
+		<div class="objective">
+			<div id="texture" class="title">Texture Mapping on Cubes</div>
+			<img src="cs488Images/texture.png"></img>
+			<div id="texture" class="title">Texture Mapping on Spheres</div>
+			<img src="cs488Images/texture1.png"></img>
+			<div id="texture" class="title">Texture Mapping</div>
+			<img src="cs488Images/texture2.png"></img>
+		</div>
+		<div class="objective">
+			<div id="setup1" class="title">Random set up scene to demonstrate reflection, refraction and glossy reflection</div>
+			<img src="cs488Images/setup1.png"></img>
+		</div>
+		<div class="objective">
+			<div id="puppet" class="title">Puppet from Assignment 3</div>
+			<img src="cs488Images/puppet.png"></img>
+		</div>
+		<h4>Extra Objectives </h4>
+		<div class="objective">
+			<div id="env" class="title">Environment Mapping</div>
+			<img src="cs488Images/env.png"></img>
+		</div>
+		<div class="objective">
+			<div id="normal" class="title">Normal Mapping</div>
+			<img src="cs488Images/normal.png"></img>
+		</div>
+		<h4>Wall-E</h4>
+		<div class="objective">
+			<div id="wallEBody" class="title">Model of Wall-E in houdini</div>
+			<img src="cs488Images/wallEModel.png"></img>
+		</div>
+		<div class="objective">
+			<div id="wallEbabackground" class="title">Model of background scene in Houdini</div>
+			<img src="cs488Images/wallEbackground.png"></img>
+		</div>
+		<div class="objective">
+			<div id="wallEEye" class="title">Texture Map for Wall-E's eye</div>
+			<img src="cs488Images/textures/eyetexturehoudini.png"></img>
+		</div>
+		<div class="objective">
+			<div id="wallEArm" class="title">Texture map for Wall-E's arm</div>
+			<img src="cs488Images/textures/wallEArm.png"></img>
+		</div>
+		<div class="objective">
+			<div id="tireTexture" class="title">Texture Map for Wall-E's tires</div>
+			<img src="cs488Images/textures/tiretexturehoudini.png"></img>
+		</div>
+		<div class="objective">
+			<div id="tireNormal" class="title">Normal Map for Wall-E's tires</div>
+			<img src="cs488Images/textures/tireuvhoudini.png"></img>
+		</div>
+		<div class="objective">
+			<div id="wallE" class="title">Final Wall-E Model</div>
+			<img src="cs488Images/WallE.png"></img>
+		</div>
+		<div class="objective">
+			<div id="final" class="title">Final Wall-E Scene</div>
+			<img src="cs488Images/final.png"></img>
+		</div>
+	</div>
+
+</body> 
+</html>
