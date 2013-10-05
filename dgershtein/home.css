@@ -121,6 +121,11 @@ body#home #container {
 	height:1200px;
 }
 
+body#home #demoreel, #carnival {
+	width:800px;
+	margin:auto;
+}
+
 /************ABOUT******/
 body#about {
 	background-color:black;
