@@ -210,6 +210,9 @@
           slider.controlNavScaffold = $('<ol class="'+ namespace + 'control-nav ' + namespace + type + '"></ol>');
 
           if (slider.pagingCount > 1) {
+			if(locationicon != null) {
+				slider.controlNavScaffold.append('<li id="location"><img src="' + locationicon + '"/></li');
+			} 
             for (var i = 0; i < slider.pagingCount; i++) {
               slide = slider.slides.eq(i);
               item = (slider.vars.controlNav === "thumbnails") ? '<img src="' + slide.attr( 'data-thumb' ) + '"/>' : '<a>' + j + '</a>';
@@ -220,9 +223,6 @@
               slider.controlNavScaffold.append('<li>' + item + '</li>');
               j++;
             }
-			if(locationicon != null) {
-				slider.controlNavScaffold.append('<li id="location"><img src="' + locationicon + '"/></li');
-			} 
           }
 
           // CONTROLSCONTAINER:
@@ -1065,8 +1065,8 @@
     // Primary Controls
     controlNav: true,               //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
     directionNav: true,             //Boolean: Create navigation for previous/next navigation? (true/false)
-    prevText: "Previous",           //String: Set the text for the "previous" directionNav item
-    nextText: "Next",               //String: Set the text for the "next" directionNav item
+    prevText: "",           //String: Set the text for the "previous" directionNav item
+    nextText: "",               //String: Set the text for the "next" directionNav item
 
     // Secondary Navigation
     keyboard: true,                 //Boolean: Allow slider navigating via keyboard left/right keys

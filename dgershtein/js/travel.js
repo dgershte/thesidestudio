@@ -97,7 +97,11 @@ function addSlide(src) {
 	var li = document.createElement('li');
 	var img = document.createElement('img');
 	img.src = src;
+	var p = document.createElement('p');
+	p.innerHTML = "some sort of text";
+	p.className = "flex-caption";
 	li.appendChild(img);
+	li.appendChild(p);
 	return li;
 }
 
@@ -116,6 +120,7 @@ function switchSliderContent(images){
 	for(var i = 0; i < numSlides; i++){
 		slider.removeSlide(0);
 	}
+	slider.flexslider(0);
 }
 
 function bindActions() {
@@ -199,6 +204,7 @@ $( document ).ready(function() {
         	$('.current-slide').text(slider.currentSlide);
       	} , 
 		smoothHeight: true,
+		pauseOnAction: true,
 	});
 	slider = $('.flexslider').data('flexslider');
 	bindActions();
