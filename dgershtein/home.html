@@ -20,16 +20,20 @@
 		<script>loadMenu()</script>
 		</div>
 		<div id="container">
-			<div class="tile" id="carnivale" onclick="document.location='carnivale.html'">
-				<img src="images/carnivale.png"/>
+			<div class="tile" id="demoreel" onclick="document.location='carnivale.html'">
+				<video loop="true" width="1000">
+					<source src="images/demoreel.mp4" type="video/mp4">
+				</video>
 				<div class="desc">
-					Carnivale Lune Bleue
+					Demo Reel
 				</div>
 			</div>
 			<div class="tile" id="raytracer" onclick="document.location='cs488.html'">
-				<img src="images/raytracer.png" width="600px"/>
+				<video height="400">
+					<source src="images/carnivale.mp4" type="video/mp4">
+				</video>
 				<div class="desc">
-					Raytracer
+					Carnivale
 				</div>
 			</div>
 			<div class="tile" id="kiwi" onclick="document.location='characters.html'">
@@ -45,5 +49,14 @@
 				<div class="desc">Hotel Transylvannia</div>
 			</div>
 		</div>	
+		<script>
+		$(document).ready(function() {
+		  $("video").hover(function(){
+			this.play();
+			},function(){
+		   this.pause()
+		  });
+		});
+		</script>	
 	</body>
 </html>

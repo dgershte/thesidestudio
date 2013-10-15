@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+    </style>
+<link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="css/travel.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/animate-custom.css" type="text/css" media="screen" />
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8teLvfW-ePSWbNfmH6IOZQEz1lD6dcvY&sensor=false">
+    </script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider.js"></script>
+	<script src="js/home.js"></script>
+    <script type="text/javascript" src="js/travelimages.js"></script>
+    <script type="text/javascript" src="js/travel.js"></script>
+  	<script src="js/jquery.easing.js"></script>
+  	<script src="js/jquery.mousewheel.js"></script>
+  	<script src="js/modernizr.js"></script>
+  </head>
+  <body>
+		<div id="header"></div>
+		  <div id="container" class="cf">
+
+			<div id="main" role="main">
+			<div id="trips">
+				<ul id="tripicons">
+					<li id="newzealand" class="active"><img src="travel/kiwi_light.png"></img><span class="countryname">New Zealand</span></li>
+					<li id="australia"><img src="travel/kangaroo_light.png"></img><span class="countryname">Australia</span></li>
+					<li id="singapore"><img src="travel/lion_light.png"></img><span class="countryname">Singapore</span></li>
+					<li id="thailand"><img src="travel/elephant_light.png"></img><span class="countryname">Thailand</span></li>
+					<li id="cambodia"><img src="travel/monkey_light.png"></img><span class="countryname">Cambodia</span></li>
+					<li id="indonesia"><img src="travel/turtle_light.png"></img><span class="countryname">Indonesia</span></li>
+				</ul>
+			</div>
+			 <section class="slider">
+				<div class="flexslider">
+				  <ul id="travelslider" class="slides">
+				  </ul>
+				</div>
+			  </section>
+			</div>
+			<div id="welcome">
+				<h2>Welcome to my Travel page!</h2>
+				This is a collection of some of the trips I have been on in the past while, together with images and map locations. Click on any marker to view images from that location. To switch trips, see the menu at the bottom.  
+			</div>
+			<div id="map-canvas"></div>
+		  </div>
+  </body>
+</html>
